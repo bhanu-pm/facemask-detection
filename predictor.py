@@ -5,8 +5,8 @@ from PIL import Image
 import utils
 
 model = utils.CNN()
-model.load_state_dict(torch.load('facemask_ext.pt'))
-model.to(utils.device)
+model.load_state_dict(torch.load('facemask_ext.pt', map_location=torch.device('cpu')))
+# model.to(utils.device)
 
 # Prediction of detected face
 def predict_on_face(frame, xcor, ycor, width, height):
@@ -19,7 +19,7 @@ def predict_on_face(frame, xcor, ycor, width, height):
 
     with torch.no_grad():
         model.eval()  # Set eval mode
-        img = img.to(utils.device)
+#         img = img.to(utils.device)
         output = model(img)
         predicted = torch.argmax(output, 1)
         predicted = predicted.to('cpu')

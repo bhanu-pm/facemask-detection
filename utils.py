@@ -6,7 +6,7 @@ import torch.nn as nn
 # if torch.cuda.is_available():
 #     device = 'cuda'
 # else:
-device = 'cpu'
+# device = 'cpu'
 
 # Defining image transformations
 transformations = torchvision.transforms.Compose([torchvision.transforms.Resize((32, 32)),

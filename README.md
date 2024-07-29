@@ -41,4 +41,8 @@ To deploy this project run the command in the same terminal
 
 ## Demo
 
-Demo Video : https://youtu.be/ItF9suBvv68
+Demo Video : https://youtu.be/ItF9suBvv68,
+
+The Application works perfectly locally, but, in the 'Free Tier' of Heroku app it keeps on crashing due to limited computing resources.
+The above claim can be verified below, where it is deployed. You can observe that the website is loading in correctly and buttons functioning properly but the only problem is the limited computing resources available, so it keeps crashing.
+Deployed on Cloud : https://facemask--detection.herokuapp.com
