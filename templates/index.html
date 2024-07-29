@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Face Mask Detection</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+
+<style>
+body {
+  background-image: url('https://2.bp.blogspot.com/-D0n4gcOewSY/XD930THnxSI/AAAAAAAAAuM/EI5cayHRjU0RqbVKcw8ff40HpKCIttzQwCKgBGAs/w0/abstract-13-4k.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+</head>
+
+<body>
+<div class = "container">
+    <div class = "starter-template">
+        <h1 style="color:white"><b>Face Mask Detection</b></h1>
+	<p style="color:white"> <i>Face mask detection using </i><b>Python, Pytorch, OpenCV and Flask</b> </p>
+	<p style="color:white"> <i>By</i> <b>M.Bhanu Prakash</b> </p>
+	<br/><br/><br/>
+        <p style="color:white" class = "lead"> Upload an Image </p>
+        <p style="color:white"> Please upload only files of the type '.jpg', '.jpeg', '.png'</p>
+    </div>
+</div>
+
+<header class="navbar">
+    <form action="/" enctype="multipart/form-data" method="post">
+        <div align="center">
+            <input type="file" name="uploaded_file" style="color:white">
+            <input type="submit" value="Detect & Display" class="btn btn-primary">
+        </div>
+    </form>
+</header>
+
+<br/><br/><br/><br/>
+
+<div class="container">
+	<div class = "started-template">
+		<p style="color:white" class = "lead"> Check live Implementation using your webcam </p>
+	</div>
+</div>
+
+<header class="navbar">
+    <form action="/webcam" method="post" enctype="multipart/form-data" >
+        <div align="center">
+            <input type="submit" value="Start Webcam" class="btn btn-primary">
+        </div>
+    </form>
+</header>
+
+<div class="text-center">
+	<div>
+		<img src="{{ url_for('webcam') }}" alt="click on 'Start Webcam' to check live implementation" style="color:white">
+    </div>
+</div>
+
+</body>
+</html>
